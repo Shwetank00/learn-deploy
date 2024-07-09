@@ -1,25 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Home} from "./pages/Home/Home";
-import {Login} from "./pages/Login/Login";
-import {SignUp} from "./pages/SignUp/SignUp";
+import { Home } from "./pages/Home/Home";
+import { Login } from "./pages/Login/Login";
+import { SignUp } from "./pages/SignUp/SignUp";
 
 const routes = (
-  <Router>
+  <Router Basename={process.env.PUBLIC_URL}>
     <Routes>
-      <Route path="/dashboard" exact  element={<Home />} />
-      <Route path="/login" exact  element={<Login />} />
-      <Route path="/signup" exact  element={<SignUp />} />
+      <Route exact path="/learn-deploy" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
     </Routes>
   </Router>
 );
 
 export const App = () => {
-  return (
-    <div>
-      {routes}
-    </div>
-  );
+  return <div>{routes}</div>;
 };
 
 export default App;
