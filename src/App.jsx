@@ -5,9 +5,9 @@ import { Login } from "./pages/Login/Login";
 import { SignUp } from "./pages/SignUp/SignUp";
 
 const routes = (
-  <Router Basename={process.env.PUBLIC_URL}>
+  <Router basename="learn-deploy">
     <Routes>
-      <Route exact path="/learn-deploy" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
     </Routes>
